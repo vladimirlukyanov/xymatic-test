@@ -2,8 +2,6 @@
 <img src="./.imgs/header.jpg" alt="Xymatic test">
 </p>
 
-# xymatic coding challenge
-
 ## Project setup
 ```
 npm install
