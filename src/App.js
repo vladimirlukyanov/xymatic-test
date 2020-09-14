@@ -1,26 +1,71 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {Switch, BrowserRouter as Router, Route} from "react-router-dom";
+import {connect} from "react-redux";
+
+// Import Routes all
+import {userRoutes, authRoutes} from "./routes";
+
+// Import all middleware
+import Authmiddleware from "./routes/middleware";
+
+// layouts Format
+import VerticalLayout from "./components/VerticalLayout/";
+import NonAuthLayout from "./components/NonAuthLayout";
+
+// Import scss
+import "./assets/scss/theme.scss";
+
+const App = (props) => {
+
+    const NonAuthmiddleware = ({
+                                   component: Component,
+                                   layout: Layout
+                               }) => (
+        <Route
+            render={props => {
+                return (
+                    <Layout>
+                        <Component {...props} />
+                    </Layout>
+                );
+            }}
+        />
+    );
+
+    return (
+        <React.Fragment>
+            <Router>
+                <Switch>
+                    {authRoutes.map((route, idx) => (
+                        <NonAuthmiddleware
+                            path={route.path}
+                            layout={NonAuthLayout}
+                            component={route.component}
+                            key={idx}
+                        />
+                    ))}
+
+                    {userRoutes.map((route, idx) => (
+                        <Authmiddleware
+                            path={route.path}
+                            layout={VerticalLayout}
+                            component={route.component}
+                            key={idx}
+                        />
+                    ))}
+
+                </Switch>
+            </Router>
+        </React.Fragment>
+
+    );
 }
 
-export default App;
+const mapStateToProps = state => {
+    return {
+        layout: state.Layout
+    };
+};
+
+export default connect(mapStateToProps, null)(App);
