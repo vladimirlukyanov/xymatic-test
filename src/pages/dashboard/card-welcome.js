@@ -16,9 +16,9 @@ const CardWelcome = (props) => {
                                 <p>Xymatic Crypto Dashboard</p>
 
                                 <div className="text-muted">
-                                    <p className="mb-1"><i className="mdi mdi-circle-medium align-middle text-primary mr-1"></i> If several languages coalesce</p>
-                                    <p className="mb-1"><i className="mdi mdi-circle-medium align-middle text-primary mr-1"></i> Sed ut perspiciatis unde</p>
-                                    <p className="mb-0"><i className="mdi mdi-circle-medium align-middle text-primary mr-1"></i> It would be necessary</p>
+                                    <p className="mb-1"><i className="mdi mdi-circle-medium align-middle text-primary mr-1"></i> Best</p>
+                                    <p className="mb-1"><i className="mdi mdi-circle-medium align-middle text-primary mr-1"></i> Solid</p>
+                                    <p className="mb-0"><i className="mdi mdi-circle-medium align-middle text-primary mr-1"></i> Cool</p>
                                 </div>
                             </div>
                         </Col>
