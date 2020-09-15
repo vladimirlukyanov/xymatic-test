@@ -9,13 +9,17 @@ import ForgetPwd from "../pages/authentication/forgetpassword";
 
 // Dashboard
 import Dashboard from "../pages/dashboard/index";
-// import DashboardCrypto from "../pages/dashboard-crypto/index";
+import FAQs from "../pages/faqs/index";
+import Profile from "../pages/profile/index";
 
 const userRoutes = [
 
+
+    // //profile
+    { path: "/profile", component: Profile },
+
     { path: "/dashboard", component: Dashboard },
-    // { path: "/dashboard-crypto", component: DashboardCrypto },
-    // this route should be at the end of all other routes
+    { path: "/faqs", component: FAQs },
     { path: "/", exact: true, component: () => <Redirect to="/dashboard" /> }
 ];
 
