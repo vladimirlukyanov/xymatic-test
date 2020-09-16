@@ -111,6 +111,7 @@ const mapStatetoProps = state => {
     ...state.Layout
   };
 };
+
 export default connect(mapStatetoProps, {
   changeSidebarTheme,
   changeSidebarType,
