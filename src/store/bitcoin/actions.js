@@ -12,3 +12,11 @@ import {
 export const getBitcoinPrice = () => ({
     type: GET_BITCOIN_PRICE
 });
+
+export const getEthereumPrice = () => ({
+    type: GET_ETHEREUM_PRICE
+});
+
+export const getLitcoinPrice = () => ({
+    type: GET_LITCOIN_PRICE
+});

@@ -3,16 +3,23 @@ import {Row, Col, Card, CardBody} from "reactstrap";
 import {connect} from "react-redux";
 import {changeLayoutWidth, changeSidebarTheme, changeSidebarType, changeTopbarTheme} from "../../store/layout/actions";
 import {withRouter} from "react-router-dom";
+import classNames from "classnames";
+
 
 import {
-    getBitcoinPrice
+    getBitcoinPrice,
+    getEthereumPrice,
+    getLitcoinPrice
 } from "../../store/bitcoin/actions";
+import miniWidget from "../../store/bitcoin/reducer";
 
 const MiniWidget = (props) => {
-    console.log(props);
 
     useEffect(() => {
         props.getBitcoinPrice();
+        props.getEthereumPrice();
+        props.getLitcoinPrice();
+
     }, []);
 
     return (
@@ -27,12 +34,17 @@ const MiniWidget = (props) => {
 
                         <Row>
                             <Col xs="6">
-                                <div>
-                                    <h5>444</h5>
-                                    <p className="text-muted text-truncate mb-0">+1
-                                        <i className="mdi mdi-arrow-up ml-1 text-success"></i>
-                                    </p>
-                                </div>
+                                {props.miniWidget.bitcoin ?
+                                    <div>
+                                        <h5>$ {props.miniWidget.bitcoin.price_usd}</h5>
+                                        <p className="text-muted text-truncate mb-0"> $ {props.miniWidget.bitcoin.percent_change_24h}
+                                            <i className={classNames('mdi ml-1', {
+                                                "mdi-arrow-up text-success": parseFloat(props.miniWidget.bitcoin.percent_change_24h) > 0,
+                                                "mdi-arrow-down text-danger": parseFloat(props.miniWidget.bitcoin.percent_change_24h) < 0
+                                            })}/>
+                                        </p>
+                                    </div>
+                                    : "Loading..."}
                             </Col>
                         </Row>
                     </CardBody>
@@ -49,12 +61,17 @@ const MiniWidget = (props) => {
 
                         <Row>
                             <Col xs="6">
-                                <div>
-                                    <h5>444</h5>
-                                    <p className="text-muted text-truncate mb-0">+1
-                                        <i className="mdi mdi-arrow-up ml-1 text-success"></i>
-                                    </p>
-                                </div>
+                                {props.miniWidget.ethereum ?
+                                    <div>
+                                        <h5>$ {props.miniWidget.ethereum.price_usd}</h5>
+                                        <p className="text-muted text-truncate mb-0"> $ {props.miniWidget.ethereum.percent_change_24h}
+                                            <i className={classNames('mdi ml-1', {
+                                                "mdi-arrow-up text-success": parseFloat(props.miniWidget.ethereum.percent_change_24h) > 0,
+                                                "mdi-arrow-down text-danger": parseFloat(props.miniWidget.ethereum.percent_change_24h) < 0
+                                            })}/>
+                                        </p>
+                                    </div>
+                                    : "Loading..."}
                             </Col>
                         </Row>
                     </CardBody>
@@ -71,12 +88,17 @@ const MiniWidget = (props) => {
 
                         <Row>
                             <Col xs="6">
-                                <div>
-                                    <h5>444</h5>
-                                    <p className="text-muted text-truncate mb-0">+1
-                                        <i className="mdi mdi-arrow-up ml-1 text-success"></i>
-                                    </p>
-                                </div>
+                                {props.miniWidget.litcoin ?
+                                    <div>
+                                        <h5>$ {props.miniWidget.litcoin.price_usd}</h5>
+                                        <p className="text-muted text-truncate mb-0"> $ {props.miniWidget.litcoin.percent_change_24h}
+                                            <i className={classNames('mdi ml-1', {
+                                                "mdi-arrow-up text-success": parseFloat(props.miniWidget.litcoin.percent_change_24h) > 0,
+                                                "mdi-arrow-down text-danger": parseFloat(props.miniWidget.litcoin.percent_change_24h) < 0
+                                            })}/>
+                                        </p>
+                                    </div>
+                                    : "Loading..."}
                             </Col>
                         </Row>
                     </CardBody>
@@ -88,11 +110,11 @@ const MiniWidget = (props) => {
 }
 
 const mapStatetoProps = state => {
-    return {
-        ...state
-    };
+    return state;
 };
 
 export default connect(mapStatetoProps, {
-    getBitcoinPrice
+    getBitcoinPrice,
+    getEthereumPrice,
+    getLitcoinPrice
 })(MiniWidget);
