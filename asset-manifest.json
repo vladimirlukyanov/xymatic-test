@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/xymatic-test/static/css/main.b535bba2.chunk.css",
+    "main.js": "/xymatic-test/static/js/main.b9839b46.chunk.js",
+    "main.js.map": "/xymatic-test/static/js/main.b9839b46.chunk.js.map",
+    "runtime-main.js": "/xymatic-test/static/js/runtime-main.7308d4d9.js",
+    "runtime-main.js.map": "/xymatic-test/static/js/runtime-main.7308d4d9.js.map",
+    "static/js/2.29ec09c1.chunk.js": "/xymatic-test/static/js/2.29ec09c1.chunk.js",
+    "static/js/2.29ec09c1.chunk.js.map": "/xymatic-test/static/js/2.29ec09c1.chunk.js.map",
+    "index.html": "/xymatic-test/index.html",
+    "precache-manifest.38c87e1de623c9e768d714923675563f.js": "/xymatic-test/precache-manifest.38c87e1de623c9e768d714923675563f.js",
+    "service-worker.js": "/xymatic-test/service-worker.js",
+    "static/css/main.b535bba2.chunk.css.map": "/xymatic-test/static/css/main.b535bba2.chunk.css.map",
+    "static/js/2.29ec09c1.chunk.js.LICENSE.txt": "/xymatic-test/static/js/2.29ec09c1.chunk.js.LICENSE.txt",
+    "static/media/avatar-1.jpg": "/xymatic-test/static/media/avatar-1.67e2b9d7.jpg",
+    "static/media/avatar-3.jpg": "/xymatic-test/static/media/avatar-3.41a180f3.jpg",
+    "static/media/avatar-4.jpg": "/xymatic-test/static/media/avatar-4.e0ab315a.jpg",
+    "static/media/theme.scss": "/xymatic-test/static/media/materialdesignicons-webfont.fe1545ef.ttf",
+    "static/media/img-1.png": "/xymatic-test/static/media/img-1.3b232eb9.png",
+    "static/media/logo-light-big.svg": "/xymatic-test/static/media/logo-light-big.cfa56427.svg",
+    "static/media/logo-light.svg": "/xymatic-test/static/media/logo-light.505bc5e6.svg",
+    "static/media/logo.svg": "/xymatic-test/static/media/logo.80a62a17.svg",
+    "static/media/profile-img.png": "/xymatic-test/static/media/profile-img.ba4e037e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7308d4d9.js",
+    "static/js/2.29ec09c1.chunk.js",
+    "static/css/main.b535bba2.chunk.css",
+    "static/js/main.b9839b46.chunk.js"
+  ]
+}
