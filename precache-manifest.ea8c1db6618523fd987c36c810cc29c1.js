@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f8ec8ab579bf3942a76bcd2423561a07",
+    "revision": "4bd327472598ad15e7cf65f1880b462c",
     "url": "/xymatic-test/index.html"
   },
   {
-    "revision": "d0d814564d26897aec02",
+    "revision": "8d536f0a640d8c19377a",
     "url": "/xymatic-test/static/css/main.b535bba2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/xymatic-test/static/js/2.29ec09c1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d0d814564d26897aec02",
-    "url": "/xymatic-test/static/js/main.31aaf401.chunk.js"
+    "revision": "8d536f0a640d8c19377a",
+    "url": "/xymatic-test/static/js/main.e7e2a3fe.chunk.js"
   },
   {
     "revision": "285601e3928c5e4fc241",
