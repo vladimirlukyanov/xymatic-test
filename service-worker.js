@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/xymatic-test/precache-manifest.38c87e1de623c9e768d714923675563f.js"
+  "/xymatic-test/precache-manifest.9f7d340782fb2e51bf0887355185bd95.js"
 );
 
 self.addEventListener('message', (event) => {
