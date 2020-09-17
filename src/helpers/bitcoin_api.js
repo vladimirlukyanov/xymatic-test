@@ -31,8 +31,32 @@ const fetchLitcoinPrice = () => {
     });
 }
 
+const fetchBitcoinMarketPrice = (start, end) => {
+    return axios.get(`https://api.coindesk.com/v1/bpi/historical/close.json?start=${start}&end=${end}`).then(response => {
+        if (response.status === 400 || response.status === 500)
+            throw response.data;
+
+        if (response.data.bpi) {
+            let _graph_arr = [];
+            Object.keys(response.data.bpi).map(function (k) {
+                _graph_arr.push({
+                    x: k,
+                    y: response.data.bpi[k]
+                })
+            })
+            return _graph_arr;
+        } else {
+            throw response.data;
+        }
+
+    }).catch(err => {
+        throw err[1];
+    });
+}
+
 export {
     fetchBitcoinPrice,
     fetchEthereumPrice,
-    fetchLitcoinPrice
+    fetchLitcoinPrice,
+    fetchBitcoinMarketPrice
 }

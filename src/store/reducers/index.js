@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
+import {combineReducers} from "redux";
 
 // Front
 import Layout from "../layout/reducer";
@@ -8,7 +8,7 @@ import Login from "../auth/login/reducer";
 import Account from "../auth/register/reducer";
 import ForgetPassword from "../auth/forgetpwd/reducer";
 import Profile from "../auth/profile/reducer";
-import miniWidget from "../bitcoin/reducer";
+import {miniWidget, overView} from "../bitcoin/reducer";
 
 const rootReducer = combineReducers({
     // public
@@ -17,7 +17,8 @@ const rootReducer = combineReducers({
     Account,
     ForgetPassword,
     Profile,
-    miniWidget
+    miniWidget,
+    overView
 });
 
 export default rootReducer;

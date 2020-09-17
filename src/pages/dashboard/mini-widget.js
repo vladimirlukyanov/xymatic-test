@@ -11,7 +11,8 @@ import {
     getEthereumPrice,
     getLitcoinPrice
 } from "../../store/bitcoin/actions";
-import miniWidget from "../../store/bitcoin/reducer";
+
+import {miniWidget} from "../../store/bitcoin/reducer";
 
 const MiniWidget = (props) => {
 
@@ -36,12 +37,12 @@ const MiniWidget = (props) => {
                             <Col xs="6">
                                 {props.miniWidget.bitcoin ?
                                     <div>
-                                        <h5>$ {props.miniWidget.bitcoin.price_usd}</h5>
-                                        <p className="text-muted text-truncate mb-0"> $ {props.miniWidget.bitcoin.percent_change_24h}
+                                        <h5>${props.miniWidget.bitcoin.price_usd}</h5>
+                                        <p className="text-muted text-truncate mb-0"> ${props.miniWidget.bitcoin.percent_change_24h}
                                             <i className={classNames('mdi ml-1', {
                                                 "mdi-arrow-up text-success": parseFloat(props.miniWidget.bitcoin.percent_change_24h) > 0,
                                                 "mdi-arrow-down text-danger": parseFloat(props.miniWidget.bitcoin.percent_change_24h) < 0
-                                            })}/>
+                                            })}/> / 24 hours
                                         </p>
                                     </div>
                                     : "Loading..."}
@@ -63,12 +64,12 @@ const MiniWidget = (props) => {
                             <Col xs="6">
                                 {props.miniWidget.ethereum ?
                                     <div>
-                                        <h5>$ {props.miniWidget.ethereum.price_usd}</h5>
+                                        <h5>${props.miniWidget.ethereum.price_usd}</h5>
                                         <p className="text-muted text-truncate mb-0"> $ {props.miniWidget.ethereum.percent_change_24h}
                                             <i className={classNames('mdi ml-1', {
                                                 "mdi-arrow-up text-success": parseFloat(props.miniWidget.ethereum.percent_change_24h) > 0,
                                                 "mdi-arrow-down text-danger": parseFloat(props.miniWidget.ethereum.percent_change_24h) < 0
-                                            })}/>
+                                            })}/> / 24 hours
                                         </p>
                                     </div>
                                     : "Loading..."}
@@ -90,12 +91,12 @@ const MiniWidget = (props) => {
                             <Col xs="6">
                                 {props.miniWidget.litcoin ?
                                     <div>
-                                        <h5>$ {props.miniWidget.litcoin.price_usd}</h5>
+                                        <h5>${props.miniWidget.litcoin.price_usd}</h5>
                                         <p className="text-muted text-truncate mb-0"> $ {props.miniWidget.litcoin.percent_change_24h}
                                             <i className={classNames('mdi ml-1', {
                                                 "mdi-arrow-up text-success": parseFloat(props.miniWidget.litcoin.percent_change_24h) > 0,
                                                 "mdi-arrow-down text-danger": parseFloat(props.miniWidget.litcoin.percent_change_24h) < 0
-                                            })}/>
+                                            })}/> / 24 hours
                                         </p>
                                     </div>
                                     : "Loading..."}

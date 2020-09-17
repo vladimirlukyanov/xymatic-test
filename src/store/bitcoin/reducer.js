@@ -1,8 +1,14 @@
 import {
-    GET_BITCOIN_PRICE_SUCCESS, GET_ETHEREUM_PRICE_SUCCESS, GET_LITCOIN_PRICE_SUCCESS,
+    GET_BITCOIN_PRICE_SUCCESS,
+    GET_ETHEREUM_PRICE_SUCCESS,
+    GET_LITCOIN_PRICE_SUCCESS,
+    GET_BITCOIN_MARKET_MONTH_SUCCESS,
+    GET_BITCOIN_MARKET_SIXMONTH_SUCCESS,
+    GET_BITCOIN_MARKET_YEAR_SUCCESS,
+    GET_BITCOIN_MARKET_ALL_SUCCESS
 } from './actionTypes';
 
-const miniWidget = (state = [], action) => {
+export const miniWidget = (state = [], action) => {
     switch (action.type) {
         case GET_BITCOIN_PRICE_SUCCESS: {
             return {
@@ -30,4 +36,34 @@ const miniWidget = (state = [], action) => {
     }
 };
 
-export default miniWidget;
+export const overView = (state = [], action) => {
+    switch (action.type) {
+
+        case GET_BITCOIN_MARKET_MONTH_SUCCESS: {
+            return {
+                graph: action.data
+            };
+        }
+
+        case GET_BITCOIN_MARKET_SIXMONTH_SUCCESS: {
+            return {
+                graph: action.data
+            };
+        }
+
+        case GET_BITCOIN_MARKET_YEAR_SUCCESS: {
+            return {
+                graph: action.data
+            };
+        }
+
+        case GET_BITCOIN_MARKET_ALL_SUCCESS: {
+            return {
+                graph: action.data
+            };
+        }
+
+        default:
+            return state;
+    }
+};
