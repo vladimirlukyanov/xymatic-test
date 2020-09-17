@@ -1,8 +1,11 @@
 <p align="center">
 <img src="./.imgs/header.jpg" alt="Xymatic test">
 </p>
-<p align="center"> [ <a href="https://vladimirlukyanov.github.io/xymatic-test/">Demo</a> ] </p>
+<br />
+<p align="center"> - [ <a href="https://vladimirlukyanov.github.io/xymatic-test/">Demo</a> ] - </p>
+
 ## Project setup
+
 ```
 npm install
 ```
