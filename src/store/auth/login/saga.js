@@ -5,7 +5,7 @@ import {LOGIN_USER, LOGOUT_USER} from './actionTypes';
 import {loginSuccess, logoutUserSuccess, apiError} from './actions';
 
 //Include Both Helper File with needed methods
-import {postLogin, postJwtLogin} from '../../../helpers/api';
+import {postLogin} from '../../../helpers/api';
 
 function* loginUser({payload: {user, history}}) {
     try {

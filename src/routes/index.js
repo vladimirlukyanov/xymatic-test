@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
+import {Redirect} from "react-router-dom";
 
 // Authentication related pages
 import Login from "../pages/authentication/login";
@@ -10,24 +10,21 @@ import ForgetPwd from "../pages/authentication/forgetpassword";
 // Dashboard
 import Dashboard from "../pages/dashboard/index";
 import FAQs from "../pages/faqs/index";
-import Profile from "../pages/profile/index";
+import UserProfile from "../pages/profile/index";
 
 const userRoutes = [
 
-
-    // //profile
-    { path: "/profile", component: Profile },
-
-    { path: "/dashboard", component: Dashboard },
-    { path: "/faqs", component: FAQs },
-    { path: "/", exact: true, component: () => <Redirect to="/dashboard" /> }
+    {path: "/dashboard", component: Dashboard},
+    {path: "/profile", component: UserProfile},
+    {path: "/faqs", component: FAQs},
+    {path: "/", exact: true, component: () => <Redirect to={"/dashboard"}/>}
 ];
 
 const authRoutes = [
-    { path: "/logout", component: Logout },
-    { path: "/login", component: Login },
-    { path: "/forgot-password", component: ForgetPwd },
-    { path: "/register", component: Register },
+    {path: "/logout", component: Logout},
+    {path: "/login", component: Login},
+    {path: "/forgot-password", component: ForgetPwd},
+    {path: "/register", component: Register},
 ];
 
-export { userRoutes, authRoutes };
+export {userRoutes, authRoutes};
